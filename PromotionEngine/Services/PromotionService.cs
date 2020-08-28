@@ -44,5 +44,83 @@ namespace PromotionEngine.Services
 
             return lstSkuPriceList.Where(x => x.Id == id).ToList()[0].Price;
         }
+
+        /// <summary>
+        /// Prepare cart list
+        /// </summary>
+        /// <param name="scenario">scrnario no-ex:1</param>
+        /// <returns>Cart list and promotion list</returns>
+        public Cart PrepareCartList(int scenario)
+        {
+            var lstCartItems = new List<CartItems>();
+            switch (scenario)
+            {
+                case 1:
+                    {
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 3, Name = "C" });
+
+                        break;
+                    }
+                case 2:
+                    {
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 3, Name = "C" });
+
+                        break;
+                    }
+
+                case 3:
+                    {
+
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 3, Name = "C" });
+                        lstCartItems.Add(new CartItems() { Id = 4, Name = "D" });
+
+                        break;
+                    }
+                case 4:
+                    {
+
+                        lstCartItems.Add(new CartItems() { Id = 1, Name = "A" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 2, Name = "B" });
+                        lstCartItems.Add(new CartItems() { Id = 3, Name = "C" });
+                        lstCartItems.Add(new CartItems() { Id = 4, Name = "D" });
+                        lstCartItems.Add(new CartItems() { Id = 4, Name = "D" });
+
+                        break;
+                    }
+
+                default:
+                    return null;
+            }
+
+            var cart = new Cart()
+            {
+                ListCartItems = lstCartItems,
+                PromotionCodes = new List<int>() { 1, 2, 3 }
+            };
+
+            return cart;
+        }
     }
 }

@@ -20,5 +20,12 @@ namespace PromotionEngine.Services
         /// <param name="lstPromotion">List of promotion id</param>
         /// <returns>Promotions</returns>
         IEnumerable<Promotion> GetPromotionList(List<int> lstPromotion);
+
+        /// <summary>
+        /// Prepare cart list
+        /// </summary>
+        /// <param name="scenario">scrnario no-ex:1</param>
+        /// <returns>Cart list and promotion list</returns>
+        Cart PrepareCartList(int scenario);
     }
 }
