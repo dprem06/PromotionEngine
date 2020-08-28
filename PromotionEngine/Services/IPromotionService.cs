@@ -27,5 +27,12 @@ namespace PromotionEngine.Services
         /// <param name="scenario">scrnario no-ex:1</param>
         /// <returns>Cart list and promotion list</returns>
         Cart PrepareCartList(int scenario);
+
+        /// <summary>
+        /// Calculate Total price
+        /// </summary>
+        /// <param name="cart">Cart Items && Promotions</param>
+        /// <returns>total</returns>
+        int CalculateTotal(Cart cart);
     }
 }

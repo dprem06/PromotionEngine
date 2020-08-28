@@ -8,6 +8,72 @@ namespace PromotionEngine.Services
 {
     public class PromotionService : IPromotionService
     {
+
+        /// <summary>
+        /// Calculate Total price
+        /// </summary>
+        /// <param name="cart">Cart Items && Promotions</param>
+        /// <returns>total</returns>
+        public int CalculateTotal(Cart cart)
+        {
+            // Grouping Products
+            var lstProducts = from p in cart.ListCartItems.ToList()
+                              group p.Name by p.Id into g
+                              select new { ProductId = g.Key, Products = g.ToList() };
+
+            // Prepare Active Promotionlist
+            var lstPromotionList = GetPromotionList(cart.PromotionCodes);
+
+
+            int total = 0;
+            foreach (var item in lstPromotionList)
+            {
+                var promotionItem = item.SkuNames.Where(x => lstProducts.Select(x => x.ProductId).ToList().Contains(x.Id)).ToList();
+
+                // If promotion has single item ex : 3 A's 130
+                if (promotionItem.ToList().Count <= 1)
+                {
+                    var lstCartProduct = cart.ListCartItems.Where(x => x.Id == promotionItem[0].Id).ToList();
+                    int productPrice = GetSkuPriceById(promotionItem[0].Id);
+
+                    if (lstCartProduct.Count() < promotionItem[0].Count)
+                    {
+
+                        total += lstCartProduct.Count() * productPrice;
+                    }
+                    else
+                    {
+
+                        total += lstCartProduct.Count % promotionItem[0].Count == 0 ? lstProducts.Count() < 4 ? lstCartProduct.Count() * productPrice // Product has no discount
+                                  : total += lstCartProduct.Count / promotionItem[0].Count * item.DiscountPrice // Product has discount 
+                                : lstCartProduct.Count % promotionItem[0].Count * productPrice + // ActualPrice
+                                 ((lstCartProduct.Count - lstCartProduct.Count % promotionItem[0].Count) / promotionItem[0].Count) * item.DiscountPrice; // Discount Price
+
+                    }
+                }
+                else
+                {
+                    // Multiple items promotion like c + d
+                    var lstCartProduct = cart.ListCartItems.Where(x => promotionItem.Select(y => y.Id).Contains(x.Id));
+
+                    // Grouping Products
+                    var lstGroupProducts = from p in lstCartProduct
+                                           group p.Name by p.Id into g
+                                           select new { ProductId = g.Key, Products = g.Count() };
+
+                    // Differences between c and d
+                    int diff = lstGroupProducts.ToList()[0].Products - lstGroupProducts.ToList()[1].Products;
+                    diff = diff > 0 ? diff : diff * -1;
+
+                    // Fetch product price
+                    int productPrice = GetSkuPriceById(diff > 0 ? lstGroupProducts.ToList()[0].ProductId : lstGroupProducts.ToList()[1].ProductId);
+                    total += (diff * productPrice) + ((diff > 0 ? lstGroupProducts.ToList()[0].Products : lstGroupProducts.ToList()[1].Products) - diff) * item.DiscountPrice;
+                }
+            }
+
+            return total;
+        }
+
         /// <summary>
         /// List of aplicable promotions
         /// </summary>
