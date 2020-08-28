@@ -6,7 +6,7 @@ namespace PromotionEngine
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             // Injecting Services
             var serviceProvider = new ServiceCollection()
@@ -16,7 +16,7 @@ namespace PromotionEngine
             var promotionService = serviceProvider.GetService<IPromotionService>();
 
             PromotionAction objEngine = new PromotionAction(promotionService);
-            int total = objEngine.calculateTotal(1);
+            int total = objEngine.CalculateTotal(1);
             Console.Write("Cart Total:" + total);
         }
     }

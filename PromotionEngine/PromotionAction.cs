@@ -13,7 +13,7 @@ namespace PromotionEngine
             _promotionService = promotionService;
         }
 
-        public int calculateTotal(int scenario)
+        public int CalculateTotal(int scenario)
         {
             // Prepare Cart List
             var cart = _promotionService.PrepareCartList(scenario);
