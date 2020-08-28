@@ -2,3 +2,15 @@ C:\premworks\Maersk\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\Prom
 C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.csprojAssemblyReference.cache
 C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.AssemblyInfoInputs.cache
 C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.AssemblyInfo.cs
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.deps.json
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.runtimeconfig.json
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.runtimeconfig.dev.json
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.dll
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.pdb
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.csproj.CoreCompileInputs.cache
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.csproj.CopyComplete
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.dll
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.pdb
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.genruntimeconfig.cache

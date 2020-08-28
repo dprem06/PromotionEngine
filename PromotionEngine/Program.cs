@@ -14,6 +14,10 @@ namespace PromotionEngine
                 .BuildServiceProvider();
 
             var promotionService = serviceProvider.GetService<IPromotionService>();
+
+            PromotionAction objEngine = new PromotionAction(promotionService);
+            int total = objEngine.calculateTotal(1);
+            Console.Write("Cart Total:" + total);
         }
     }
 }
