@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "y1izZsZxekTZGuq+EU/g3D/8mRcv4wuFsUcvveRXONdisKtnRdmnBdH3jP/xlXtLqf5ExPCiMEGydMoCtw++Bw==",
+  "dgSpecHash": "rTE8V3KOUWxPSoBMpuUsxeKNTIW2wAoOJTSiBBxCXJtNpwIHOhrh4qktUWPjS2ak4PLsvObbf8a0yMRvpu1npA==",
   "success": true,
   "projectFilePath": "C:\\premworks\\Maersk\\PromotionEngine\\PromotionEngine\\PromotionEngine.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\eem1kor\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0-preview.8.20407.11\\microsoft.extensions.dependencyinjection.5.0.0-preview.8.20407.11.nupkg.sha512",
+    "C:\\Users\\eem1kor\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0-preview.8.20407.11\\microsoft.extensions.dependencyinjection.abstractions.5.0.0-preview.8.20407.11.nupkg.sha512"
+  ],
   "logs": []
 }

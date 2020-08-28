@@ -38,6 +38,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.0-preview.8.20407.11, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

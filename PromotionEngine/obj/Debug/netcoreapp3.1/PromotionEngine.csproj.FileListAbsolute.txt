@@ -1,0 +1,4 @@
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\bin\Debug\netcoreapp3.1\PromotionEngine.exe
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.csprojAssemblyReference.cache
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.AssemblyInfoInputs.cache
+C:\premworks\Maersk\PromotionEngine\PromotionEngine\obj\Debug\netcoreapp3.1\PromotionEngine.AssemblyInfo.cs
